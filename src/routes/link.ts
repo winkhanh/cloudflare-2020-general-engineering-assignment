@@ -1,23 +1,23 @@
-interface linkObject{
+export interface linkObject{
     name:string,
     url:string
 }
-const links=[
+export const links=[
     {
     "name"  : "LinkedIn profile",
     "url"   : "https://www.linkedin.com/in/wkhanh-le/"
     },
     {
-        "name"  : "LinkedIn profile",
-        "url"   : "https://www.linkedin.com/in/wkhanh-le/"
+        "name"  : "Github profile",
+        "url"   : "https://github.com/winkhanh"
     },
     {
-        "name"  : "LinkedIn profile",
-        "url"   : "https://www.linkedin.com/in/wkhanh-le/"
+        "name"  : "Personal Website",
+        "url"   : "https://winkhanh.github.io/"
     }
 ];
 
-const linkHandler = (request: Request): Response =>{
+const linksRequestHandler = (request: Request): Response =>{
     const init = {
         headers: { 'content-type': 'application/json'}
     };
@@ -25,4 +25,4 @@ const linkHandler = (request: Request): Response =>{
     return new Response(body,init);
 }
 
-export default linkHandler;
+export default linksRequestHandler;
